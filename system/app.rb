@@ -1,6 +1,7 @@
 require_relative "boot"
 
 Config::DB.connect
+Config::DB.log if ENV["RACK_ENV"] == "development"
 
 module AuthChecker
   class App < Roda

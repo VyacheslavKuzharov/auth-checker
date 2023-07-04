@@ -3,7 +3,10 @@ module AuthChecker
     hash_branch("v1", "users") do |r|
       # GET /api/v1/users/:uuid
       r.get String do |user_id|
-        JsonResponse.render(roles: user_id)
+        user = User[user_id]
+        r.halt(404, [{error: "user with id: #{user_id}, not found!"}]) unless user
+
+        JsonResponse.render(roles: user.roles.map(&:key))
       end
 
       # GET /api/v1/users/role/:key

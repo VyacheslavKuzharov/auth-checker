@@ -1,5 +1,8 @@
 class User < Sequel::Model
   plugin :json_serializer
 
-  one_to_many :user_roles
+  many_to_many :roles,
+    left_key: :user_id,
+    right_key: :role_id,
+    join_table: :user_roles
 end
