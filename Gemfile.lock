@@ -1,0 +1,73 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ast (2.4.2)
+    bigdecimal (1.4.4)
+    dotenv (2.8.1)
+    json (2.6.3)
+    language_server-protocol (3.17.0.3)
+    lint_roller (1.0.0)
+    nio4r (2.5.9)
+    parallel (1.23.0)
+    parser (3.2.2.3)
+      ast (~> 2.4.1)
+      racc
+    pg (1.5.3)
+    puma (6.3.0)
+      nio4r (~> 2.0)
+    racc (1.7.1)
+    rack (3.0.8)
+    rainbow (3.1.1)
+    rake (13.0.6)
+    regexp_parser (2.8.1)
+    rexml (3.2.5)
+    roda (3.69.0)
+      rack
+    rubocop (1.52.1)
+      json (~> 2.3)
+      parallel (~> 1.10)
+      parser (>= 3.2.2.3)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.28.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 2.4.0, < 3.0)
+    rubocop-ast (1.29.0)
+      parser (>= 3.2.1.0)
+    rubocop-performance (1.18.0)
+      rubocop (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
+    ruby-progressbar (1.13.0)
+    sequel (4.49.0)
+    standard (1.29.0)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.0)
+      rubocop (~> 1.52.0)
+      standard-custom (~> 1.0.0)
+      standard-performance (~> 1.1.0)
+    standard-custom (1.0.1)
+      lint_roller (~> 1.0)
+    standard-performance (1.1.0)
+      lint_roller (~> 1.0)
+      rubocop-performance (~> 1.18.0)
+    unicode-display_width (2.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bigdecimal (~> 1.4)
+  dotenv
+  pg (~> 1.1)
+  puma
+  rake
+  roda
+  sequel (~> 4.36)
+  standard
+
+RUBY VERSION
+   ruby 2.7.2p137
+
+BUNDLED WITH
+   2.1.4
