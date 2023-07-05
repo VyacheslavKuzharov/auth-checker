@@ -9,7 +9,7 @@ module AuthChecker
         JsonResponse.render(roles: user.roles.map(&:key))
       end
 
-      # GET /api/v1/users/role/:key
+      # GET /api/v1/users/role/:key?page=1&limit=2
       r.get "role", String do |key|
         role = Role.where(key: key).first
         r.halt(404, [{error: "role with key: #{key}, not found!"}]) unless role

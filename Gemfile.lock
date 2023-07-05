@@ -3,7 +3,9 @@ GEM
   specs:
     ast (2.4.2)
     bigdecimal (1.4.4)
+    diff-lcs (1.5.0)
     dotenv (2.8.1)
+    inflecto (0.0.2)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
     lint_roller (1.0.0)
@@ -17,12 +19,36 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (3.0.8)
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.8.1)
     rexml (3.2.5)
     roda (3.69.0)
       rack
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.2)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
+    rspec-mocks (3.12.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-roda (0.2.0)
+      inflecto
+      rack-test (~> 0.6.3)
+      roda
+      rspec (~> 3.0)
+      rspec-its (~> 1.2.0)
+    rspec-support (3.12.1)
     rubocop (1.52.1)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -63,6 +89,8 @@ DEPENDENCIES
   puma
   rake
   roda
+  rspec
+  rspec-roda
   sequel (~> 4.36)
   standard
 

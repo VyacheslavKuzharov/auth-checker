@@ -13,3 +13,8 @@ gem "bigdecimal", "~> 1.4"
 group :development, :test do
   gem "standard"
 end
+
+group :test do
+  gem "rspec"
+  gem "rspec-roda"
+end
