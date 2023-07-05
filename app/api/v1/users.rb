@@ -11,7 +11,19 @@ module AuthChecker
 
       # GET /api/v1/users/role/:key
       r.get "role", String do |key|
-        JsonResponse.render(keys: key)
+        role = Role.where(key: key).first
+        r.halt(404, [{error: "role with key: #{key}, not found!"}]) unless role
+
+        paginate = Pagination.new(page: r.params["page"], limit: r.params["limit"])
+
+        users = User.select_all(:users)
+          .join(:user_roles, user_id: :id)
+          .where(role_id: role.id)
+          .limit(paginate.per_page)
+          .offset(paginate.offset)
+          .to_a
+
+        JsonResponse.render(users: users, total: users.size, page: paginate.page_no)
       end
     end
   end
