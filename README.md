@@ -9,7 +9,7 @@ A simple project to discover roda web framework. Just for fun.
 * Clone the App repo:
 
 ```
-
+git@github.com:VyacheslavKuzharov/auth-checker.git
 ```
 
 Install dependencies:
@@ -24,5 +24,10 @@ To run web server use command:
 
 To run postgres use command:
 ```
- docker-compose up
+ docker-compose up db
+```
+
+To run rubocop use command:
+```
+ standardrb
 ```
